@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Medicamento</title>
+</head>
+<body>
+    <h1>Formulário de Medicamento</h1>
+    <form action="/medicamento" method="post">
+        <label for="grau_desidratacao">Grau de Desidratação:</label>
+        <select id="grau_desidratacao" name="grau_desidratacao">
+            <option value="Leve">Leve</option>
+            <option value="Moderada">Moderada</option>
+            <option value="Grave">Grave</option>
+        </select>
+        <br>
+        <label for="peso_animal">Peso do Animal (em kg):</label>
+        <input type="number" id="peso_animal" name="peso_animal" step="0.01" required>
+        <br>
+        <button type="submit">Calcular Soro</button>
+
+        </form>
+        {% if volume_total %}
+            {{ volume_total }}
+        {% endif %}
+
+</body>
+</html>
