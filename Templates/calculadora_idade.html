@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial e a largura da visualização para dispositivos móveis -->
+    <title>Calculadora Idade</title> <!-- Define o título da página -->
+</head>
+<body>
+    <h1>Calculadora Idade</h1> <!-- Título principal da página -->
+    <form action="/calculadora_idade" method="post">
+        <label for='ser'>Você quer converter a idade de um cachorro ou de um gato?</label>
+        <select id="ser" name="ser">
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+        </select>
+        <br>
+        <label for="idade">Quntos anos seu animal tem?</label>
+        <input type="number" id="idade" name="idade" required>
+        <br>
+        <button type="submit">Calcular idade</button>
+    </form>
+</body>
+
+
+
+
+
+</html>
