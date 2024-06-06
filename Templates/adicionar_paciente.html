@@ -9,8 +9,8 @@
     <h1>Adicionar paciente</h1>
 
     <form action="/adicionar_paciente" method="POST">
-<!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
-# e telefone de contato [6]. -->
+<!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], email[5], nome-tutor[6]
+# e telefone de contato [7]. -->
         <label for="nome">Nome do seu pet (opcional): </label><br>
         <input type="text" id="nome" name="nome"><br>
 
@@ -23,7 +23,10 @@
         <label for="peso">Peso do animal (em kg): </label><br>
         <input type="text" id="peso" name="peso"><br>
 
-        <label for="nome-tutor">Email:</label><br>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="nome-tutor">Nome do dono do animal:</label><br>
         <input type="text" id="nome-tutor" name="nome-tutor" required><br>
 
         <label for="telefone">Telefone de contato:</label><br>

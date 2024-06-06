@@ -5,8 +5,8 @@ app = Flask(__name__)
 pacientes = []
 
 
-# Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
-# e telefone de contato [6].
+# Código[0], nome[1], espécie[2], raça[3], peso[4], email[5], nome-tutor[6]
+# e telefone de contato [7].
 
 @app.route('/')
 def index():
@@ -20,10 +20,11 @@ def adicionar_paciente():
         especie = request.form['especie']
         raca = request.form['raca']
         peso = request.form['peso']
+        email = request.form['email']
         nometutor = request.form['nome-tutor']
         telefone = request.form['telefone']
         codigo = len(pacientes)
-        pacientes.append([codigo, nomeanimal, especie, raca, peso, nometutor, telefone])
+        pacientes.append([codigo, nomeanimal, especie, raca, peso, email, nometutor, telefone])
         return redirect('/')
     else:
         return render_template('adicionar_paciente.html')  # Renderiza o formulário de adicionar paciente
