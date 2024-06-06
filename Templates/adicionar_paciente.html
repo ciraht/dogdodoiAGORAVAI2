@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar paciente</title>
+    <link rel="stylesheet" href="../static/css/adicionar_paciente.css">
 </head>
 <body>
-    <h1>Adicionar paciente</h1>
+    <header>
+
 
     <form action="/adicionar_paciente" method="POST">
 <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], email[5], nome-tutor[6]
@@ -28,11 +30,13 @@
             <input type="text" id="outros" name="outros" step="0.01" >
         </div> <br>
 
-        <label for="raca">Raça do animal (opcional): </label><br>
-        <input type="text" id="raca" name="raca"><br>
 
-        <label for="peso">Peso do animal (em kg): </label><br>
-        <input type="number" id="peso" name="peso"><br>
+                <label for="especie">Espécie do animal (cachorro, gato, etc): </label><br>
+                <input type="text" id="especie" name="especie" required><br>
+
+                <label for="raca">Raça do animal (opcional): </label><br>
+                <input type="text" id="raca" name="raca"><br>
+
 
         <label for="nome-tutor">Nome do dono do animal:</label><br>
         <input type="text" id="nome-tutor" name="nome-tutor" required><br>
@@ -43,7 +47,10 @@
         <label for="telefone">Telefone de contato:</label><br>
         <input type="number" id="telefone" name="telefone" required><br>
 
-        <input type="submit" value="Adicionar">
+
+                <label for="telefone">Telefone de contato:</label><br>
+                <input type="tel" id="telefone" name="telefone" required><br>
+
 
     </form>
 
@@ -62,5 +69,6 @@
 
     </script>
     <a href="/"><button> Cancelar </button></a>
+
 </body>
 </html>

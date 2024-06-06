@@ -1,0 +1,20 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+}
+main {
+    background-color: #99D6D1;
+    padding-bottom: 20vh;
+}
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.botao-especial {
+    background-color: #51D69E;
+}
+.botao-especial:hover {
+    background-color: #51D6CA;
+}
