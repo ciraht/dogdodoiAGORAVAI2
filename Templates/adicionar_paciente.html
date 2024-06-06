@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar paciente</title>
+</head>
+<body>
+    <h1>Adicionar paciente</h1>
+
+    <form action="/adicionar_paciente" method="POST">
+<!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
+# e telefone de contato [6]. -->
+        <label for="nome">Nome do seu pet (opcional): </label><br>
+        <input type="text" id="nome" name="nome"><br>
+
+        <label for="especie">Espécie do animal (cachorro, gato, etc): </label><br>
+        <input type="text" id="especie" name="especie" required><br>
+
+        <label for="raca">Raça do animal (opcional): </label><br>
+        <input type="text" id="raca" name="raca"><br>
+
+        <label for="peso">Peso do animal (em kg): </label><br>
+        <input type="text" id="peso" name="peso"><br>
+
+        <label for="nome-tutor">Email:</label><br>
+        <input type="text" id="nome-tutor" name="nome-tutor" required><br>
+
+        <label for="telefone">Telefone de contato:</label><br>
+        <input type="tel" id="telefone" name="telefone" required><br>
+
+        <input type="submit" value="Adicionar">
+
+    </form>
+</body>
+</html>
