@@ -1,14 +1,44 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
-
-from flask import Flask, render_template
-
-app = Flask(__name__)
+consultas = []
+pacientes = []
 
 @app.route('/')
 def pagina_inicial():
-    return render_template('index.html')
+    return render_template('index.html', pacientes=pacientes, consultas=consultas)
+
+@app.route('/adicionar_paciente', methods=['GET', 'POST'])
+def adicionar_paciente():
+    if request.method == 'POST':
+        nomeanimal = request.form['nome']
+        especie = request.form['especie']
+        raca = request.form['raca']
+        peso = request.form['peso']
+        email = request.form['email']
+        nometutor = request.form['nome-tutor']
+        telefone = request.form['telefone']
+        codigo = len(pacientes)
+        pacientes.append([codigo, nomeanimal, especie, raca, peso, email, nometutor, telefone])
+        return redirect('/')
+    else:
+        return render_template('adicionar_paciente.html')  # Renderiza o formulário de adicionar paciente
+
+
+@app.route('/agendar_consulta', methods=['GET', 'POST'])
+def agendar_consulta():
+    if request.method == 'POST':
+        nomeanimal = request.form['nome']
+        horario = request.form['horario']
+        data = request.form['data']
+        nometutor = request.form['nome-tutor']
+        codigo = request.form['codigo']
+        sintomas = request.form['sintomas']
+        consultas.append([codigo, nomeanimal, horario, data, nometutor, sintomas])
+        return redirect('/')
+    else:
+        return render_template('agendar_consulta.html')  # Renderiza o formulário de agendar consulta
+
 
 @app.route('/calculadora_idade')
 def index():

@@ -24,7 +24,7 @@
             e telefone de contato [6]. -->
 
                 {% for paciente in pacientes %}
-                <li>{{ paciente[1] }} - {{ paciente[2] }} - {{ paciente[3] }} - {{ paciente[4] }} - {{ paciente[5] }} {{ paciente[6] }}
+                <li>{{ paciente[1] }} | {{ paciente[2] }} | {{ paciente[3] }} | {{ paciente[4] }} | {{ paciente[5] }} | {{ paciente[6] }}
                     <ul>
                         <li><a href="/editar_paciente/{{ loop.index0 }}">Editar</a></li> <!-- Link para editar as informações do paciente -->
                     </ul>
