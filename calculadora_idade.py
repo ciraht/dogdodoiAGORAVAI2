@@ -1,53 +1,69 @@
-from flask import Flask, render_template, request
-
+from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
-@app.route('/calculadora_idade')
-def index():
-    return render_template("calculadora_idade.html", mensagem='')
 
-@app.route('/calculadora_idade', methods=['POST'])
+
+@app.route('/calculadora_idade', methods=['GET', 'POST'])
 def calculadora_idade():
-    ser = request.form.get('ser')
-    idade = int(request.form.get('idade'))
-    mensagem = ''
+  ser = request.form.get('ser')
+  acaba = 0
 
-    if ser == "Cachorro":
-        if idade == 1:
-            mensagem = "1 ano para o cachorro equivalem a 15 anos para o ser humano"
-        elif idade == 2:
-            mensagem = "2 anos para o cachorro equivalem a 24 anos para o ser humano"
-        elif idade == 3:
-            mensagem = "3 anos para o cachorro equivalem a 28 anos para o ser humano"
-        elif idade == 4:
-            mensagem = "4 anos para o cachorro equivalem a 32 anos para o ser humano"
-        elif idade == 5:
-            mensagem = "5 anos para o cachorro equivalem a 36 anos para o ser humano"
-        elif idade == 6:
-            mensagem = "6 anos para o cachorro equivalem a 40 anos para o ser humano"
-        elif idade >= 7:
-            idade_equivalente = 44 + (idade - 7) * 5
-            mensagem = f"{idade} anos para o cachorro equivalem a {idade_equivalente} anos para o ser humano"
-
-    elif ser == "Gato":
-        if idade == 1:
-            mensagem = "1 ano para o gato equivalem a 15 anos para o ser humano"
-        elif idade == 2:
-            mensagem = "2 anos para o gato equivalem a 24 anos para o ser humano"
-        elif idade == 3:
-            mensagem = "3 anos para o gato equivalem a 28 anos para o ser humano"
-        elif idade == 4:
-            mensagem = "4 anos para o gato equivalem a 32 anos para o ser humano"
-        elif idade == 5:
-            mensagem = "5 anos para o gato equivalem a 36 anos para o ser humano"
-        elif idade >= 6:
-            idade_equivalente = 40 + (idade - 6) * 4
-            mensagem = f"{idade} anos para o gato equivalem a {idade_equivalente} anos para o ser humano"
-
+  if ser == "Cachorro":
+    idade = request.form.get('idade')
+    if idade == 1:
+      return "1 ano para o cachorro equivalem a 15 anos para o ser humano"
+    elif idade == 2:
+      return "2 anos para o cachorro equivalem a 24 anos para o ser humano"
+    elif idade == 3:
+      return "3 anos para o cachorro equivalem a 28 anos para o ser humano"
+    elif idade == 4:
+      return "4 anos para o cachorro equivalem a 32 anos para o ser humano"
+    elif idade == 5:
+      return "5 anos para o cachorro equivalen a 36 anos para o ser humano"
+    elif idade == 6:
+      return "6 anos para o cachorro equivalen a 40 anos para o ser humano"
+    elif idade == 7:
+      return "7 anos para o cachorro equivalem a 44 anos para o ser humano"
     else:
-        mensagem = "Você escreveu algo errado! Confira de novo"
+      while True:
+        conta = idade - 7
+        anos = conta * 5
+        return f"{idade} anos para o cachorro equivalem a {anos + 44} para o ser humano"
+        acaba += 1
+        if acaba == 1:
+          break
 
-    return render_template('calculadora_idade.html', mensagem=mensagem)
+  elif ser == "Gato":
+    idade = request.form.get('idade')
+    if idade == 1:
+      return "1 ano para o gato equivalem a 15 anos para o ser humano"
+    elif idade == 2:
+      return "2 anos para o gato equivalem a 24 anos para o ser humano"
+    elif idade == 3:
+      return "3 anos para o gato equivalem a 28 anos para o ser humano"
+    elif idade == 4:
+      return "4 anos para o gato equivalem a 32 anos para o ser humano"
+    elif idade == 5:
+      return "5 anos para o gato equivalen a 36 anos para o ser humano"
+    elif idade == 6:
+      return"6 anos para o gato equivalen a 40 anos para o ser humano"
+    else:
+      while True:
+        conta = idade - 6
+        anos = conta * 4
+        return f"{idade} anos para o cachorro equivalem a {anos + 40} para o ser humano"
+        acaba += 1
+        if acaba == 1:
+          break
+
+  else:
+    return "Você escreveu algo errado! confira de novo"
+
+@app.route('/calculadora_idade')
+def apagar_contato():
+  return render_template("calculadora_idade.html")
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
