@@ -7,7 +7,6 @@
 </head>
 <body>
     <h1>Formulário de Medicamento</h1>
-    <h2>Quantidade de mililitros de soro: </h2>
     <form action="/medicamento" method="post">
         <label for="grau_desidratacao">Grau de Desidratação:</label>
         <select id="grau_desidratacao" name="grau_desidratacao">
@@ -23,58 +22,8 @@
 
         </form>
         {% if volume_total %}
-            {{ volume_total }} ml
-        {% endif %}
-<br>
----------------------------------------------------------------------------
-
-<br>
-<h2>Miligramas/peso corporal do medicamento: </h2>
-    <form action="/dose" method="post">
-        <label for="remedio">Escolha o medicamento:</label>
-        <select id="remedio" name="remedio">
-            <option value="Petrilan">Petrilan</option>
-            <option value="Canidexa">Canidexa</option>
-            <option value="Felinoflam">Felinoflam</option>
-            <option value="Puprilon">Puprilon</option>
-            <option value="Meowmed">Meowmed</option>
-            <option value="Vetranix">Vetranix</option>
-            <option value="Caniforte">Caniforte</option>
-            <option value="FeliCure">FeliCure</option>
-            <option value="Pawsitrex">Pawsitrex</option>
-            <option value="WoofGuard">WoofGuard</option>
-            <option value="Outro">Outro</option>
-        </select>
-
-        <div id="div_outros" style="display: none">
-            <label for="outros">Escreva o valor da dose recomendada de seu medicamento: </label>
-            <input type="number" id="outros" name="outros" step="0.01" >
-        </div>
-
-        <br>
-        <label for="peso_animal2">Peso do Animal (em kg):</label>
-        <input type="number" id="peso_animal2" name="peso_animal2" step="0.01" required>
-        <br>
-        <button type="submit">Calcular</button>
-
-        </form>
-
-        {% if dose %}
-            {{ dose }} ml/kg
+            {{ volume_total }}
         {% endif %}
 
-        <script>
-            let remedio = document.getElementById("remedio")
-
-            remedio.addEventListener("change", function() {
-                let valor = document.getElementById("remedio").value
-                if (valor === "Outro") {
-                    document.getElementById("div_outros").style.display = "block"
-                } else {
-                    document.getElementById("div_outros").style.display = "none"
-                }
-            })
-
-        </script>
 </body>
 </html>
