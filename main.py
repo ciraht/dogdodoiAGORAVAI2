@@ -22,7 +22,27 @@ def adicionar_paciente():
         pacientes.append([codigo, nomeanimal, especie, raca, peso, email, nometutor, telefone])
         return redirect('/')
     else:
-        return render_template('adicionar_paciente.html')  # Renderiza o formulário de adicionar paciente
+        return render_template('adicionar_paciente.html')
+
+
+@app.route('/editar_paciente/<int:codigo>', methods=['GET', 'POST'])
+def editar_paciente(codigo):
+    if request.method == 'POST':
+        nomeanimal = request.form['nome']
+        especie = request.form['especie']
+        raca = request.form['raca']
+        peso = request.form['peso']
+        email = request.form['email']
+        nometutor = request.form['nome-tutor']
+        telefone = request.form['telefone']
+
+        pacientes[codigo] = [nomeanimal, especie, raca, peso, email, nometutor, telefone]
+
+        return redirect('/')
+    else:
+        paciente = pacientes[codigo]
+        return render_template('editar_paciente.html', paciente=paciente)
+
 
 
 @app.route('/agendar_consulta', methods=['GET', 'POST'])
@@ -32,7 +52,7 @@ def agendar_consulta():
         horario = request.form['horario']
         data = request.form['data']
         nometutor = request.form['nome-tutor']
-        codigo = request.form['codigo']
+        codigo = len(consultas)
         sintomas = request.form['sintomas']
         consultas.append([codigo, nomeanimal, horario, data, nometutor, sintomas])
         return redirect('/')
@@ -40,6 +60,10 @@ def agendar_consulta():
         return render_template('agendar_consulta.html')  # Renderiza o formulário de agendar consulta
 
 
+@app.route('/cancelar_consulta/<int:codigo>')
+def cancelar_consulta(codigo):
+    del consultas[codigo]
+    return redirect('/')
 @app.route('/calculadora_idade')
 def index():
     return render_template("calculadora_idade.html", mensagem='')
