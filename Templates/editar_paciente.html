@@ -11,25 +11,49 @@
         <label for="nome">Nome do Animal:</label>
         <input type="text" id="nome" name="nome" value="{{ paciente[1] }}" required>
         <br>
-        <label for="especie">Espécie:</label>
-        <input type="text" id="especie" name="especie" value="{{ paciente[2] }}" required>
-        <br>
+        <label for="especie">Espécie do animal: </label><br>
+        <select id="especie" name="especie">
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+            <option value="Coelho">Coelho</option>
+            <option value="Passaro">Pássaro</option>
+            <option value="Outro">Outro</option>
+        </select>
+
+        <div id="div_outros2" style="display: none">
+            <label for="outros">Escreva a espécie de seu animal: </label>
+            <input type="text" id="outros" name="outros" step="0.01" >
+        </div> <br>
         <label for="raca">Raça:</label>
         <input type="text" id="raca" name="raca" value="{{ paciente[3] }}" required>
         <br>
         <label for="peso">Peso:</label>
         <input type="text" id="peso" name="peso" value="{{ paciente[4] }}" required>
         <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="{{ paciente[5] }}" required>
+        <label for="nome-tutor">Nome Tutor:</label>
+        <input type="text" id="nome-tutor" name="nome-tutor" value="{{ paciente[5] }}" required>
         <br>
-        <label for="nome-tutor">Nome do Tutor:</label>
-        <input type="text" id="nome-tutor" name="nome-tutor" value="{{ paciente[6] }}" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ paciente[6] }}" required>
         <br>
         <label for="telefone">Telefone:</label>
         <input type="text" id="telefone" name="telefone" value="{{ paciente[7] }}" required>
         <br>
         <button type="submit">Salvar Alterações</button>
     </form>
+    <script>
+            let especie = document.getElementById("especie")
+
+            especie.addEventListener("change", function() {
+                let valor = document.getElementById("especie").value
+                if (valor === "Outro") {
+                    document.getElementById("div_outros2").style.display = "block"
+                } else {
+                    document.getElementById("div_outros2").style.display = "none"
+                }
+            })
+
+    </script>
+
 </body>
 </html>
