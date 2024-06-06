@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial e a largura da visualização para dispositivos móveis -->
@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1>Calculadora Idade</h1> <!-- Título principal da página -->
+    <p>
+        Se você já se perguntou quantos anos seu cachorro ou gato teria se
+        fosse um ser humano, está no lugar certo. Nossa ferramenta intuitiva<BR>
+        transforma a idade dos seus pets em idade humana, ajudando você a
+        compreender melhor suas necessidades e cuidados em cada fase da vida.<BR>
+        Descubra agora mesmo quantos anos humanos tem o seu amigo peludo
+    </p>
     <form action="/calculadora_idade" method="post">
         <label for='ser'>Você quer converter a idade de um cachorro ou de um gato?</label>
         <select id="ser" name="ser">
@@ -19,10 +26,8 @@
         <br>
         <button type="submit">Calcular idade</button>
     </form>
-
-
-    {% if anos %}
-        {{ anos }}
+    {% if mensagem %}
+        {{mensagem}}
     {% endif %}
 </body>
 
