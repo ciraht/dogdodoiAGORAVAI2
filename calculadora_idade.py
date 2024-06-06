@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 
+@app.route('/calculadora_idade', methods=['GET'])
+def mostrar_formulario():
+    return render_template('calculadora_idade.html', anos='')
 
 @app.route('/calculadora_idade', methods=['GET', 'POST'])
 def calculadora_idade():
@@ -59,9 +62,8 @@ def calculadora_idade():
   else:
     return "Você escreveu algo errado! confira de novo"
 
-@app.route('/calculadora_idade')
-def apagar_contato():
-  return render_template("calculadora_idade.html")
+
+  return render_template("calculadora_idade.html", anos=anos)
 
 
 
