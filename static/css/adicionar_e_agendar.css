@@ -75,3 +75,78 @@ select option {
 
     position: relative;
 }
+
+/* Cabeçalho e rodapé a seguir: */
+.cabecao{
+    background-color: #518DD6;
+    display: flex;
+    height: 30vh;
+    justify-content: flex-end;
+    flex-direction: column;
+
+}
+.cabecao div{
+    background-color: #3d6da8;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.btn{
+    margin: 0 15px;
+    color: white;
+    font-size: 1em;
+    padding-top: 0px;
+    border-color: #518DD6;
+
+    width: 200px;
+    height: 50px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ffffff00;
+    border:  solid white 3px;
+    margin: 0px;
+    letter-spacing: 0.1px;
+    margin-top:10px;
+    font-weight: 800;
+
+}
+.btn:hover {
+    background-color: #51B7D6;
+    border-color: #51B7D6;
+}
+.logo {
+    width: 278px;
+    height: 80px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.rodape {
+    background-color: #518DD6;
+    display: flex;
+    justify-content: center;
+    
+}
+.redes {
+    height: 80px;
+}
+.rodape2 {
+    display: flex;
+    justify-content: center;
+    background-color: #518DD6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cor_azul {
+    background-color: #518DD6;
+    color: white;
+    width: 100%;
+}
+.divdiv {
+    display: flex;
+    justify-content: end;
+}
+.logo2 {
+    height: 80px;
+}
