@@ -15,7 +15,9 @@
             <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
         </div>
     </header>
-    <main>
+
+    <main class="fundo">
+        <img src="../static/img/equipe.png" alt="" class="imagem">
         <section>
             <div class="inicial">
             <img src="../static/img/gato_cachorro.png" alt="" class="gato_cachorro"> 
@@ -31,40 +33,58 @@
                  Sinta-se à vontade para explorar nosso site e descobrir como podemos cuidar
                   da saúde e felicidade dos seus amigos peludos.
             </p>
-            </div>
-            <img src="../static/img/divisa.png" alt="" class="divisa">
+            
             </div>
         </section>
 
         <section>
-            <p>Lista de Pacientes</p>
-            <ul>
-
-            <!--  Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
-            e-mail [6] telefone [7]. -->
-
+            <p class="centraliza">Lista de Pacientes</p>
+            
+            <br><br>
+            <div>
                 {% for paciente in pacientes %}
-                <li>Nome do pet: {{ paciente[1] }} | Animal: {{ paciente[2] }} | Raça: {{ paciente[3] }} | Peso: {{ paciente[4] }} | Nome do tutor: {{ paciente[5] }} | E-mail: {{ paciente[6] }} | Telefone de contato: {{ paciente[7]}}
-                    <ul>
-                        <li><a href="/editar_paciente/{{ loop.index0 }}">Editar</a></li> <!-- Link para editar as informações do paciente -->
-                    </ul>
-                </li>
+                <div class="quadro_paciente">
+                    
+                    <div>
+                        <br>
+                        <div class="contato">
+                            <p class="nome">{{ paciente[1] }}</p>
+                            <br>
+                            <p>Nome do pet: <span class="preto">{{ paciente[1] }}</span> </p>
+                            <p>Animal: <span class="preto">{{ paciente[2] }}</span></p>
+                            <p>Raça: <span class="preto">{{ paciente[3] }}</span> </p>
+                            <p>Peso: <span class="preto">{{ paciente[4] }}</span> </p>
+                            <p>Nome do tutor: <span class="preto">{{ paciente[5] }}</span> </p>
+                            <p>E-mail: <span class="preto">{{ paciente[6] }}</span> </p> 
+                            <p>Telefone de contato: <span class="preto">{{ paciente[7]}}</span></p>
+                            <br>
+                        </div>
+                        <div>
+                            <a href="/editar_paciente/{{ loop.index0 }}"><button>Editar</button></a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
                 {% endfor %}
-            </ul>
-            <a href="/adicionar_paciente">Adicionar Paciente</a>
+                
+            </div>
+            
+            <a href="/adicionar_paciente"><button class="butaozin">Adicionar Paciente</button></a>
             <!-- Botão de editar aqui-->
         </section>
 
         <section>
-            <p>Lista de Consultas</p>
-        <ul>
-            {% for consulta in consultas %}
-                <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
-                <ul>
-                    <li><a href="/cancelar_consulta/{{ loop.index0 }}">Cancelar Consulta</a></li> <!-- Correção aqui -->
-                </ul>
-            {% endfor %}
-        </ul>
+        <p>Lista de Consultas</p>
+        <div>
+            <ul>
+                {% for consulta in consultas %}
+                    <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
+                    <ul>
+                        <li><a href="/cancelar_consulta/{{ loop.index0 }}">Cancelar Consulta</a></li> <!-- Correção aqui -->
+                    </ul>
+                {% endfor %}
+            </ul>
+        </div>
 
             <a href="/agendar_consulta">Agendar consulta</a>
 
