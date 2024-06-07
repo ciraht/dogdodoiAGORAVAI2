@@ -147,3 +147,6 @@ select option {
     display: flex;
     justify-content: end;
 }
+.logo2 {
+    height: 80px;
+}
