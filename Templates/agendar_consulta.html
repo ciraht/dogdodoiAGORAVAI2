@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar consulta</title>
+    <link rel="stylesheet" href="../static/css/adicionar_e_agendar.css">
 </head>
 <body>
-    <h1>Agendar consulta</h1>
+    <header></header>
+    <main>
+        <h1>Agendar consulta</h1>
 
-    <form action="/agendar_consulta" method="POST">
-<!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
-# e telefone de contato [6]. -->
-        <label for="nomes"> Nome do animal: </label><br>
+        <form action="/agendar_consulta" method="POST">
+            <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
+            # e telefone de contato [6]. -->
+            <label for="nomes"> Nome do animal: </label><br>
+            <select id="nomes" name="nomes">
+                {% for paciente in pacientes %}
+                <option>{{paciente[1]}}</option>
+                {% endfor %}
+            </select> <br>
 
+            <label for="nome-tutor">Nome do tutor: </label><br>
+            <input type="text" id="nome-tutor" name="nome-tutor" required><br>
 
-        <select id="nomes" name="nomes">
-            {% for paciente in pacientes %}
-            <option >{{paciente[1]}}</option>
-            {% endfor %}
-        </select> <br>
-        <label for="nome-tutor">Nome do tutor: </label><br>
-        <input type="text" id="nome-tutor" name="nome-tutor" required><br>
+            <label for="data">Data da consulta: </label><br>
+            <input type="date" id="data" name="data" required><br>
 
-        <label for="data">Data da consulta: </label><br>
-        <input type="date" id="data" name="data" required><br>
+            <label for="horario">Horário de atendimento (exemplo: 1706 = 17:06): </label><br>
+            <input type="number" id="horario" name="horario" required><br>
 
-        <label for="horario">Horário de atendimento (exemplo: 1706 = 17:06): </label><br>
-        <input type="number" id="horario" name="horario" required><br>
+            <label for="sintomas">Informe os sintomas do animal ou o motivo da consulta:</label><br>
+            <input type="text" id="sintomas" name="sintomas" required><br>
 
-        <label for="sintomas">Informe os sintomas do animal ou o motivo da consulta:</label><br>
-        <input type="text" id="sintomas" name="sintomas" required><br>
-
-        <input type="submit" value="Agendar">
-    </form>
-    <a href="/"><button> Cancelar </button></a>
+            <button type="submit" class="botao-especial">Adicionar</button>
+            <a href="/"><button class="botao-especial"> Cancelar </button></a>
+        </form>
+        
+    </main>
 </body>
 </html>
