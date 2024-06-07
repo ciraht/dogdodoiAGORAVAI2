@@ -4,32 +4,55 @@
     <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial e a largura da visualização para dispositivos móveis -->
     <title>Calculadora Idade</title> <!-- Define o título da página -->
+    <link rel="stylesheet" href="../static/css/calculadora.css">
 </head>
 <body>
-    <h1>Calculadora Idade</h1> <!-- Título principal da página -->
-    <p>
-        Se você já se perguntou quantos anos seu cachorro ou gato teria se
-        fosse um ser humano, está no lugar certo. Nossa ferramenta intuitiva<BR>
-        transforma a idade dos seus pets em idade humana, ajudando você a
-        compreender melhor suas necessidades e cuidados em cada fase da vida.<BR>
-        Descubra agora mesmo quantos anos humanos tem o seu amigo peludo
-    </p>
-    <form action="/calculadora_idade" method="post">
-        <label for='ser'>Você quer converter a idade de um cachorro ou de um gato?</label>
-        <select id="ser" name="ser">
-            <option value="Cachorro">Cachorro</option>
-            <option value="Gato">Gato</option>
-        </select>
-        <br>
-        <label for="idade">Quntos anos seu animal tem?</label>
-        <input type="number" id="idade" name="idade" required>
-        <br>
-        <button type="submit">Calcular idade</button>
-    </form>
-    {% if mensagem %}
-        {{mensagem}}
-    {% endif %}
-    <a href="/"><button> Voltar </button></a>
+    <header class="cabecao">
+        <img src="../static/img/logo.png" alt="" class="logo">
+        <div>
+            <a href="/"><button class="btn">HOME</button></a>
+            <a href="calculadora_idade"><button class="btn">CALCULADORE DE IDADE</button></a>
+            <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
+        </div>
+    </header>
+    <main>
+        <img src="../static/img/chacorros_e_tagos.png" alt="" class="imagem">
+        
+        <h1 class="titulo">Calculadora de Idade</h1> <!-- Título principal da página -->
+        <br><br>
+        <p class="textin">
+            Se você já se perguntou quantos anos seu cachorro ou gato teria se
+            fosse um ser humano, está no lugar certo. Nossa ferramenta intuitiva
+            transforma a idade dos seus pets em idade humana, ajudando você a
+            compreender melhor suas necessidades e cuidados em cada fase da vida.<BR>
+            Descubra agora mesmo quantos anos humanos tem o seu amigo peludo
+        </p>
+        <br><br>
+        <img src="../static/img/duas_pata.png" alt="" class="patas">
+        <div class="idade">
+            <form action="/calculadora_idade" method="post">
+                <br><br>
+                <label for='ser'>Você quer converter a idade de um cachorro ou de um gato?</label>
+                <select id="ser" name="ser">
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
+                </select>
+                <br>
+                <label for="idade">Quntos anos seu animal tem?</label>
+                <input type="number" id="idade" name="idade" required>
+                <br><br>
+                <button type="submit">Calcular idade</button>
+                <br></br>
+                {% if mensagem %}
+                {{mensagem}}
+                {% endif %}
+        </div>
+            
+        </form>
+        <br><br>
+        <img src="../static/img/patas.png" alt="" class="patas">
+        
+    </main>
 </body>
 
 

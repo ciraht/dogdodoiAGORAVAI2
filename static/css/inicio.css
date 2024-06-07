@@ -96,6 +96,7 @@ h1 {
     font-size: 30px;
     margin-left: 1%;
     margin-top: 10px;
+    font-weight: bolder;
 }
 .divisa {
     position: relative;
@@ -114,4 +115,28 @@ h1 {
     bottom: -66.6219%;
     left: -46.8%;
     height: 90px;
+}
+.rodape {
+    background-color: #518DD6;
+    display: flex;
+    justify-content: center;
+    
+}
+.redes {
+    height: 80px;
+}
+.rodape2 {
+    display: flex;
+    justify-content: center;
+    background-color: #518DD6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cor_azul {
+    background-color: #518DD6;
+    color: white;
+    width: 100%;
+}
+.divdiv {
+    display: flex;
+    justify-content: end;
 }
