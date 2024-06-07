@@ -8,35 +8,52 @@
 </head>
 <body>
     <header></header>
-    <main>
-        <h1>Agendar consulta</h1>
+    <main style="background-image: url(../static/img/textura-patas.png)">
+        <section>
+            <h1>Agendar consulta</h1>
 
-        <form action="/agendar_consulta" method="POST">
-            <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
-            # e telefone de contato [6]. -->
-            <label for="nomes"> Nome do animal: </label><br>
-            <select id="nomes" name="nomes">
-                {% for paciente in pacientes %}
-                <option>{{paciente[1]}}</option>
-                {% endfor %}
-            </select> <br>
+            <div class="bloco-form">
+                <form action="/agendar_consulta" method="POST">
+                    <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], nome do tutor[5]
+                    # e telefone de contato [6]. -->
 
-            <label for="nome-tutor">Nome do tutor: </label><br>
-            <input type="text" id="nome-tutor" name="nome-tutor" required><br>
+                    <div>
+                        <label for="nomes"> Nome do animal: </label><br>
+                        <select id="nomes" name="nomes">
+                            {% for paciente in pacientes %}
+                            <option>{{paciente[1]}}</option>
+                            {% endfor %}
+                        </select> <br>
+                    </div>
 
-            <label for="data">Data da consulta: </label><br>
-            <input type="date" id="data" name="data" required><br>
+                    <div>
+                        <label for="nome-tutor">Nome do tutor: </label><br>
+                        <input type="text" id="nome-tutor" name="nome-tutor" required><br>
+                    </div>
 
-            <label for="horario">Horário de atendimento (exemplo: 1706 = 17:06): </label><br>
-            <input type="number" id="horario" name="horario" required><br>
+                    <div>
+                        <label for="data">Data da consulta: </label><br>
+                        <input type="date" id="data" name="data" required><br>
+                    </div>
 
-            <label for="sintomas">Informe os sintomas do animal ou o motivo da consulta:</label><br>
-            <input type="text" id="sintomas" name="sintomas" required><br>
+                    <div>
+                        <label for="horario">Horário de atendimento (exemplo: 1706 = 17:06): </label><br>
+                        <input type="number" id="horario" name="horario" required><br>
+                    </div>
 
-            <button type="submit" class="botao-especial">Adicionar</button>
-            <a href="/"><button class="botao-especial"> Cancelar </button></a>
-        </form>
+                    <div>
+                        <label for="sintomas">Informe os sintomas do animal ou o motivo da consulta:</label><br>
+                        <input type="text" id="sintomas" name="sintomas" required><br>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="botao-especial">ADICIONAR</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         
     </main>
+    <footer></footer>
 </body>
 </html>
