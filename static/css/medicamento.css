@@ -88,8 +88,8 @@
     height: 80px;
 }
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
     margin-left: 1%;
     margin-top: 10px;
     font-weight: bolder;
@@ -104,6 +104,7 @@ h1 {
     border: 10px solid #518DD6;
     text-align: center;
     font-size: larger;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.434);
 }
 .container {
     width: 100%;
@@ -130,3 +131,9 @@ h1 {
     width: 100px;
     font-weight: bold;
 }
+@media (max-width: 630px)
+    {
+        .cabecao div{
+            height: 160px;
+        }
+    }
