@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Dodói</title>
+    <link rel="stylesheet" href="../static/css/inicio.css">
+</head>
+<body>
+    <header class="cabecao">
+        <img src="../static/img/logo.png" alt="" class="logo">
+        <div>
+            <a href="/"><button class="btn">HOME</button></a>
+            <a href="lista_de_pacientes.html"><button class="btn">LISTA DE PACIENTES</button></a>
+            <a href="calculadora_idade"><button class="btn">CALCULADORE DE IDADE</button></a>
+            <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
+        </div>
+    </header>
+
+    <main class="fundo">
+        <img src="../static/img/equipe.png" alt="" class="imagem">
+        <section>
+            <div class="inicial">
+            <img src="../static/img/gato_cachorro.png" alt="" class="gato_cachorro"> 
+            <!-- Imagem ilustrativa com texto embaixo -->
+             <div class="ota_div">
+             <h1>QUEM SOMOS NÓS</h1>
+             <br><br><br><br><br><br><br>   
+            <p class="texto1"> Na Clínica Veterinária Dog Dodoi, priorizamos a comunicação transparente,
+                 cuidados personalizados e, acima de tudo, o carinho pelos animais.
+                  Navegue pelo nosso site para conhecer mais sobre nossos serviços,
+                   agendar consultas e acessar recursos informativos sobre o bem-estar animal.
+                Estamos aqui para sermos a extensão do seu cuidado e amor pelos seus animais de estimação.
+                 Sinta-se à vontade para explorar nosso site e descobrir como podemos cuidar
+                  da saúde e felicidade dos seus amigos peludos.
+            </p>
+            
+            </div>
+        </section>
+
+        <section>
+            <p class="centraliza">Lista de Pacientes</p>
+            
+            <br><br>
+            <div>
+                {% for paciente in pacientes %}
+                <div class="quadro_paciente">
+                    
+                    <div>
+                        <br>
+                        <div class="contato">
+                            <p class="nome">{{ paciente[1] }}</p>
+                            <br>
+                            <p>Nome do pet: <span class="preto">{{ paciente[1] }}</span> </p>
+                            <p>Animal: <span class="preto">{{ paciente[2] }}</span></p>
+                            <p>Raça: <span class="preto">{{ paciente[3] }}</span> </p>
+                            <p>Peso: <span class="preto">{{ paciente[4] }}</span> </p>
+                            <p>Nome do tutor: <span class="preto">{{ paciente[5] }}</span> </p>
+                            <p>E-mail: <span class="preto">{{ paciente[6] }}</span> </p> 
+                            <p>Telefone de contato: <span class="preto">{{ paciente[7]}}</span></p>
+                            <br>
+                        </div>
+                        <div class="botoes">
+                            <a href="/editar_paciente/{{ loop.index0 }}"><button>Editar</button></a>
+                      
+                        <a href="/cancelar_paciente/{{ loop.index0 }}"><button class="botao">Excluir Paciente</button></a> <!-- Correção aqui -->
+                    </div>
+                    </div>
+                </div>
+                <br><br>
+                {% endfor %}
+                
+            </div>
+            
+            <a href="/adicionar_paciente"><button class="butaozin">Adicionar Paciente</button></a>
+            <!-- Botão de editar aqui-->
+        </section>
+
+        <section>
+        <p>Lista de Consultas</p>
+        <div>
+            <ul>
+                {% for consulta in consultas %}
+                    <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
+                    <ul>
+                        <li><a href="/cancelar_consulta/{{ loop.index0 }}" >Cancelar Consulta</a></li> <!-- Correção aqui -->
+                    </ul>
+                {% endfor %}
+            </ul>
+        </div>
+
+            <a href="/agendar_consulta">Agendar consulta</a>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="cor_azul">
+            <br>
+        <div class="rodape">
+            <br><br><br>
+            <img src="../static/img/contatos_verdadeiro.png" alt="" class="redes">
+
+        </div>
+        <br>
+        <div class="rodape2">
+            <p>Info • Support • Marketing</p>
+        </div>
+        <br>
+        <div class="rodape2">
+            <p>Termos de Uso • Política de Privacidade</p>
+        </div>
+        <br>
+        <div class="rodape2">
+            <p>©2024 Dog Dodói</p>
+        </div>
+        <div class="divdiv"><img src="../static/img/logo2.png" alt="" class="logo2"></div>
+        <br>
+    </div>
+    </footer>
+</body>
+</html>

@@ -11,6 +11,7 @@
         <img src="../static/img/logo.png" alt="" class="logo">
         <div>
             <a href="/"><button class="btn">HOME</button></a>
+            <a href="lista_de_pacientes"><button class="btn">LISTA DE PACIENTES</button></a>
             <a href="calculadora_idade"><button class="btn">CALCULADORE DE IDADE</button></a>
             <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
         </div>
@@ -59,9 +60,11 @@
                             <p>Telefone de contato: <span class="preto">{{ paciente[7]}}</span></p>
                             <br>
                         </div>
-                        <div>
+                        <div class="botoes">
                             <a href="/editar_paciente/{{ loop.index0 }}"><button>Editar</button></a>
-                        </div>
+                      
+                        <a href="/cancelar_paciente/{{ loop.index0 }}"><button class="botao">Excluir Paciente</button></a> <!-- Correção aqui -->
+                    </div>
                     </div>
                 </div>
                 <br><br>
@@ -80,7 +83,7 @@
                 {% for consulta in consultas %}
                     <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
                     <ul>
-                        <li><a href="/cancelar_consulta/{{ loop.index0 }}">Cancelar Consulta</a></li> <!-- Correção aqui -->
+                        <li><a href="/cancelar_consulta/{{ loop.index0 }}" >Cancelar Consulta</a></li> <!-- Correção aqui -->
                     </ul>
                 {% endfor %}
             </ul>

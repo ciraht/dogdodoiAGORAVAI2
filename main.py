@@ -4,6 +4,9 @@ app = Flask(__name__)
 consultas = []
 pacientes = []
 
+@app.route('/lista_de_pacientes')
+def lista_de_pacientes():
+    return render_template('lista_de_pacientes.html')
 @app.route('/')
 def pagina_inicial():
     return render_template('index.html', pacientes=pacientes, consultas=consultas)
@@ -43,7 +46,10 @@ def editar_paciente(codigo):
         paciente = pacientes[codigo]
         return render_template('editar_paciente.html', paciente=paciente)
 
-
+@app.route('/cancelar_paciente/<int:codigo>')
+def cancelar_paciente(codigo):
+    del pacientes[codigo]
+    return redirect('/')
 
 
 @app.route('/agendar_consulta', methods=['GET', 'POST'])
