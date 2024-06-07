@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .cabecao{
@@ -58,4 +59,74 @@
     margin-left: 10px;
     margin-bottom: 10px;
     border-radius: 10px 10px 10px 10px;
+}
+.rodape {
+    background-color: #518DD6;
+    display: flex;
+    justify-content: center;
+    
+}
+.redes {
+    height: 80px;
+}
+.rodape2 {
+    display: flex;
+    justify-content: center;
+    background-color: #518DD6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cor_azul {
+    background-color: #518DD6;
+    color: white;
+    width: 100%;
+}
+.divdiv {
+    display: flex;
+    justify-content: end;
+}
+.logo2 {
+    height: 80px;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    margin-left: 1%;
+    margin-top: 10px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+.calculadora1 {
+    background-color: #F8F1CF;
+    flex-grow: 1;
+    border-radius: 20px 20px 20px 20px;
+    height: 350px;
+    border: 10px solid #518DD6;
+    text-align: center;
+    font-size: larger;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap
+}
+.espacamento {
+    flex-grow: 1;
+
+}
+.titulo1 {
+    text-align: center;
+}
+.itens {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #3d6da8;
+}
+.btn43 {
+    background-color: white;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid #3d6da8;
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
 }
