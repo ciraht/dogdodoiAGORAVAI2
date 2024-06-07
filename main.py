@@ -53,12 +53,18 @@ def agendar_consulta():
         horario = request.form['horario']
         data = request.form['data']
         nometutor = request.form['nome-tutor']
-        codigo = request.form['codigo']
+        codigo = len(consultas)
         sintomas = request.form['sintomas']
         consultas.append([codigo, nomeanimal, horario, data, nometutor, sintomas])
         return redirect('/')
     else:
         return render_template('agendar_consulta.html', pacientes=pacientes)  # Renderiza o formulário de agendar consulta
+
+
+@app.route('/cancelar_consulta/<int:codigo>')
+def cancelar_consulta(codigo):
+    del consultas[codigo]
+    return redirect('/')
 
 
 @app.route('/calculadora_idade')
