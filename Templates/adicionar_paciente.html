@@ -10,7 +10,8 @@
     <header>
 
     </header>
-    <main>
+    <main style="background-image: url(../static/img/textura-patas.png)">
+        <div>
         <section>
             <h1>CADASTRAR PACIENTE</h1>
 
@@ -46,7 +47,7 @@
 
                     <div>
                         <label for="peso">Peso do animal (em kg): </label>
-                        <input type="number" id="peso" name="peso" placeholder="(Somente números, em kg)"><br>
+                        <input min = 0.1 step = 0.000001 type="number" id="peso" name="peso" placeholder="(Somente números, em kg)"><br>
                     </div>
 
                     <div>
@@ -66,10 +67,8 @@
 
                     <div>
                         <button type="submit" class="botao-especial">ADICIONAR</button>
-                        <a href="/"><button class="botao-especial"> CANCELAR </button></a>
                     </div>
                 </form>
-
 
                 <script>
                         let especie = document.getElementById("especie")
