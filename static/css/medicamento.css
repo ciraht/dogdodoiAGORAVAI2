@@ -124,12 +124,17 @@ h1 {
     border: 2px solid #3d6da8;
 }
 .btn43 {
-    background-color: white;
-    border-radius: 30px 30px 30px 30px;
-    border: 2px solid #3d6da8;
     height: 30px;
-    width: 100px;
-    font-weight: bold;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ffffff00;
+    border:  solid #509FB0 3px;
+    color: #509FB0;
+    margin: 0px;
+    letter-spacing: 0.1px;
+    margin-top:10px;
+    font-weight: 800;
+    padding-left: 15px;
+    padding-right:15px;
 }
 @media (max-width: 630px)
     {
