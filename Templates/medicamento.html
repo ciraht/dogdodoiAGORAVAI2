@@ -15,63 +15,82 @@
             <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
         </div>
     </header>
+    <main style="background-image: url(../static/img/fundoosso.png);">
     <h1>Formulário de Medicamento</h1>
-    <h2>Quantidade de mililitros de soro: </h2>
-    <form action="/medicamento" method="post">
-        <label for="grau_desidratacao">Grau de Desidratação:</label>
-        <select id="grau_desidratacao" name="grau_desidratacao">
-            <option value="Leve">Leve</option>
-            <option value="Moderada">Moderada</option>
-            <option value="Grave">Grave</option>
-        </select>
-        <br>
-        <label for="peso_animal">Peso do Animal (em kg):</label>
-        <input type="number" id="peso_animal" name="peso_animal" step="0.01" required>
-        <br>
-        <button type="submit">Calcular Soro</button>
+    <div class="container">
+        <div class="espacamento"></div>
+            <div class="calculadora1">
+                <br><br>
+            <h2 class="titulo1">Quantidade de mililitros de soro: </h2>
+            <br><div class="formulario">
+            <form action="/medicamento" method="post">
+                <label for="grau_desidratacao">Grau de Desidratação:</label>
+                <select id="grau_desidratacao" name="grau_desidratacao" class="itens">
+                    <option value="Leve">Leve</option>
+                    <option value="Moderada">Moderada</option>
+                    <option value="Grave">Grave</option>
+                </select>
+                <br><br>
+                <label for="peso_animal">Peso do Animal (em kg):</label>
+                <input type="number" id="peso_animal" name="peso_animal" step="0.01" required class="itens">
+                <br><br><br><br>
+                <button type="submit" class="btn43">Calcular Soro</button>
 
-        </form>
-        {% if volume_total %}
-            {{ volume_total }} ml
-        {% endif %}
+                </form>
+            </div>
+                {% if volume_total %}
+                    {{ volume_total }} ml
+                {% endif %}
+            </div>
+        <div class="espacamento"></div>
+</div>
 <br>
----------------------------------------------------------------------------
+
 
 <br>
-<h2>Miligramas/peso corporal do medicamento: </h2>
-    <form action="/dose" method="post">
-        <label for="remedio">Escolha o medicamento:</label>
-        <select id="remedio" name="remedio">
-            <option value="Petrilan">Petrilan</option>
-            <option value="Canidexa">Canidexa</option>
-            <option value="Felinoflam">Felinoflam</option>
-            <option value="Puprilon">Puprilon</option>
-            <option value="Meowmed">Meowmed</option>
-            <option value="Vetranix">Vetranix</option>
-            <option value="Caniforte">Caniforte</option>
-            <option value="FeliCure">FeliCure</option>
-            <option value="Pawsitrex">Pawsitrex</option>
-            <option value="WoofGuard">WoofGuard</option>
-            <option value="Outro">Outro</option>
-        </select>
+<div class="container">
+    <div class="espacamento"></div>
+        <div class="calculadora1">
+            <br><br>
+<h2 class="titulo1">Miligramas/peso corporal do medicamento: </h2>
+<br><div class="formulario"></div>
+        <form action="/dose" method="post">
+            <label for="remedio">Escolha o medicamento:</label>
+            <select id="remedio" name="remedio" class="itens">
+                <option value="Petrilan">Petrilan</option>
+                <option value="Canidexa">Canidexa</option>
+                <option value="Felinoflam">Felinoflam</option>
+                <option value="Puprilon">Puprilon</option>
+                <option value="Meowmed">Meowmed</option>
+                <option value="Vetranix">Vetranix</option>
+                <option value="Caniforte">Caniforte</option>
+                <option value="FeliCure">FeliCure</option>
+                <option value="Pawsitrex">Pawsitrex</option>
+                <option value="WoofGuard">WoofGuard</option>
+                <option value="Outro">Outro</option>
+            </select>
+            <br><br>
+            <div id="div_outros" style="display: none">
+                <label for="outros">Escreva o valor da dose recomendada de seu medicamento: </label>
+                <input type="number" id="outros" name="outros" step="0.01" class="itens">
+            </div>
 
-        <div id="div_outros" style="display: none">
-            <label for="outros">Escreva o valor da dose recomendada de seu medicamento: </label>
-            <input type="number" id="outros" name="outros" step="0.01" >
+            <br>
+            <label for="peso_animal2">Peso do Animal (em kg):</label>
+            <input type="number" id="peso_animal2" name="peso_animal2" step="0.01" required class="itens">
+            <br><br><br><br>
+            <button type="submit" class="btn43">Calcular</button>
+
+            </form>
+            {% if dose %}
+                {{ dose }} ml/kg
+            {% endif %}
+            <br><br><br>
         </div>
-
-        <br>
-        <label for="peso_animal2">Peso do Animal (em kg):</label>
-        <input type="number" id="peso_animal2" name="peso_animal2" step="0.01" required>
-        <br>
-        <button type="submit">Calcular</button>
-
-        </form>
-
-        {% if dose %}
-            {{ dose }} ml/kg
-        {% endif %}
-
+        <div class="espacamento"></div>
+    
+</div>
+<br>
         <script>
             let remedio = document.getElementById("remedio")
 
@@ -85,6 +104,33 @@
             })
 
         </script>
-    <a href="/"><button> Voltar </button></a>
+        
+    <!-- <a href="/"><button> Voltar </button></a> -->
+    
+</main>
+<footer>
+    <div class="cor_azul">
+        <br>
+    <div class="rodape">
+        <br><br><br>
+        <img src="../static/img/contatos_verdadeiro.png" alt="" class="redes">
+
+    </div>
+    <br>
+    <div class="rodape2">
+        <p>Info • Support • Marketing</p>
+    </div>
+    <br>
+    <div class="rodape2">
+        <p>Termos de Uso • Política de Privacidade</p>
+    </div>
+    <br>
+    <div class="rodape2">
+        <p>©2024 Dog Dodói</p>
+    </div>
+    <div class="divdiv"><img src="../static/img/logo2.png" alt="" class="logo2"></div>
+    <br>
+</div>
+</footer>
 </body>
 </html>
