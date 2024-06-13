@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Dodói</title>
-    <link rel="stylesheet" href="../static/css/inicio.css">
+    <link rel="stylesheet" href="../static/css/lista_de_pacientes.css">
+    <link rel="shortcut icon" href="../static/img/logo2.png" type="image/x-icon">
 </head>
 <body>
     <header class="cabecao">
@@ -23,37 +24,34 @@
             
             <p class="centraliza">Lista de  Pacientes</p>
             
-            <div>
-                
-                {% for paciente in pacientes %}
-                <div class="quadro_paciente">
-                      
-                    <div>
-                        <br>
-                        <div class="contato">
-                            
-                            <p class="nome">{{ paciente[1] }}</p>
-                            <br>
-                            <p>Nome do pet: <span class="preto">{{ paciente[1] }}</span> </p>
-                            <p>Animal: <span class="preto">{{ paciente[2] }}</span></p>
-                            <p>Raça: <span class="preto">{{ paciente[3] }}</span> </p>
-                            <p>Peso: <span class="preto">{{ paciente[4] }}</span> </p>
-                            <p>Nome do tutor: <span class="preto">{{ paciente[5] }}</span> </p>
-                            <p>E-mail: <span class="preto">{{ paciente[6] }}</span> </p> 
-                            <p>Telefone de contato: <span class="preto">{{ paciente[7]}}</span></p>
-                            <br>
-                        </div>
-                        <div class="botoes">
-                            <a href="/editar_paciente/{{ loop.lista_de_pacientes0 }}"><button>Editar</button></a>
-                      
-                        <a href="/cancelar_paciente/{{ loop.lista_de_pacientes0 }}"><button class="botao">Excluir Paciente</button></a> <!-- Correção aqui -->
-                    </div>
-                    </div>
-                </div>
                 <br><br>
-                {% endfor %}
-                
+            {% for paciente in pacientes %}
+            <div class="quadro_paciente">
+                      
+                <div>
+                    <br>
+                    <div class="contato">
+                            
+                        <p class="nome">{{ paciente[1] }}</p>
+                        <br>
+                        <p>Nome do pet: <span class="preto">{{ paciente[1] }}</span> </p>
+                        <p>Animal: <span class="preto">{{ paciente[2] }}</span></p>
+                        <p>Raça: <span class="preto">{{ paciente[3] }}</span> </p>
+                        <p>Peso: <span class="preto">{{ paciente[4] }}</span> </p>
+                        <p>Nome do tutor: <span class="preto">{{ paciente[5] }}</span> </p>
+                        <p>E-mail: <span class="preto">{{ paciente[6] }}</span> </p> 
+                        <p>Telefone de contato: <span class="preto">{{ paciente[7]}}</span></p>
+                        <br>
+                    </div>
+                    <div class="botoes">
+                        <a href="/editar_paciente/{{ loop.index0 }}"><button>Editar</button></a>
+                      
+                    <a href="/cancelar_paciente/{{ loop.index0 }}"><button class="botao">Excluir Paciente</button></a> <!-- Correção aqui -->
+                </div>
+                </div>
             </div>
+            <br><br>
+            {% endfor %}
             
             <a href="/adicionar_paciente"><button class="butaozin">Adicionar Paciente</button></a>
             <!-- Botão de editar aqui-->
@@ -66,7 +64,7 @@
                 {% for consulta in consultas %}
                     <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
                     <ul>
-                        <li><a href="/cancelar_consulta/{{ loop.lista_de_pacientes0 }}" >Cancelar Consulta</a></li> <!-- Correção aqui -->
+                        <li><a href="/cancelar_consulta/{{ loop.index0 }}" >Cancelar Consulta</a></li> <!-- Correção aqui -->
                     </ul>
                 {% endfor %}
             </ul>

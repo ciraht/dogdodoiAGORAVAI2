@@ -1,25 +1,26 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar dados de paciente</title>
     <link rel="stylesheet" href="../static/css/adicionar_e_agendar.css">
+    <link rel="shortcut icon" href="../static/img/logo2.png" type="image/x-icon">
 </head>
 <body>
     <header class="cabecao">
         <img src="../static/img/logo.png" alt="" class="logo">
         <div>
             <a href="/"><button class="btn">HOME</button></a>
-            <a href="lista_de_pacientes"><button class="btn">LISTA DE PACIENTES</button></a>
+            <a href="lista_de_pacientes" class="mudar"><button class="btn">LISTA DE PACIENTES</button></a>
             <a href="calculadora_idade"><button class="btn">CALCULADORE DE IDADE</button></a>
             <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
         </div>
     </header>
-    <main style="background-image: url(../static/img/textura-patas2.png);">
+    <main>
 
         <section>
-            <h1>Editar Informações do Paciente</h1>
+            <h1>EDITAR PACIENTE</h1>
 
             <div class="bloco-form">
                 <form action="/editar_paciente/{{ paciente[0] }}" method="post">
