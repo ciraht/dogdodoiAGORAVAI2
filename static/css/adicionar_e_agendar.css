@@ -204,3 +204,8 @@ select option {
         width: 77px;
     }
 }
+@media (min-width: 768px) {
+    .cabecao {
+        height: 26vh;
+    }
+}
