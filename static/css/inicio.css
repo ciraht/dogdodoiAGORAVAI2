@@ -273,3 +273,23 @@ h3 {
 .logo2 {
     height: 80px;
 }
+
+@media(max-width:1200px) {
+    .inicial {
+        height: 530px;
+    }
+    .osso {
+        height: 0px;
+        width: 0px;
+    }
+    .patinha {
+        height: 0px;
+        width: 0px;
+    }
+
+    .igin {
+        width: 130px;
+        height: 160px;
+        left: 750px;
+    }
+}
