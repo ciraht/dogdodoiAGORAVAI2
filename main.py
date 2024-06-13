@@ -6,7 +6,7 @@ pacientes = []
 
 @app.route('/lista_de_pacientes')
 def lista_de_pacientes():
-    return render_template('lista_de_pacientes.html')
+    return render_template('lista_de_pacientes.html', pacientes=pacientes, consultas=consultas )
 @app.route('/')
 def pagina_inicial():
     return render_template('index.html', pacientes=pacientes, consultas=consultas)
@@ -23,7 +23,7 @@ def adicionar_paciente():
         telefone = request.form['telefone']
         codigo = len(pacientes)
         pacientes.append([codigo, nomeanimal, especie, raca, peso, nometutor, email, telefone])
-        return redirect('/')
+        return redirect('/lista_de_pacientes')
     else:
         return render_template('adicionar_paciente.html')
 
@@ -41,7 +41,7 @@ def editar_paciente(codigo):
 
         pacientes[codigo] = [codigo, nomeanimal, especie, raca, peso, nometutor, email, telefone]
 
-        return redirect('/')
+        return redirect('/lista_de_pacientes')
     else:
         paciente = pacientes[codigo]
         return render_template('editar_paciente.html', paciente=paciente)
@@ -49,7 +49,7 @@ def editar_paciente(codigo):
 @app.route('/cancelar_paciente/<int:codigo>')
 def cancelar_paciente(codigo):
     del pacientes[codigo]
-    return redirect('/')
+    return redirect('/lista_de_pacientes')
 
 
 @app.route('/agendar_consulta', methods=['GET', 'POST'])
@@ -62,7 +62,7 @@ def agendar_consulta():
         codigo = len(consultas)
         sintomas = request.form['sintomas']
         consultas.append([codigo, nomeanimal, horario, data, nometutor, sintomas])
-        return redirect('/')
+        return redirect('/lista_de_pacientes')
     else:
         return render_template('agendar_consulta.html', pacientes=pacientes)  # Renderiza o formulário de agendar consulta
 
@@ -70,7 +70,7 @@ def agendar_consulta():
 @app.route('/cancelar_consulta/<int:codigo>')
 def cancelar_consulta(codigo):
     del consultas[codigo]
-    return redirect('/')
+    return redirect('/lista_de_pacientes')
 
 
 @app.route('/calculadora_idade')
