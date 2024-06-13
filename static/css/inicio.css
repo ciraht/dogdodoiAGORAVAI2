@@ -86,7 +86,7 @@ section:first-child p {
     height: 90%;
     margin-top: 20px;
     margin-left: 50px;
-    position: relative;
+    position: relative; 
     border-radius: 10px 10px 10px 10px;
 }
 .inicial {
@@ -106,98 +106,90 @@ section:first-child p {
     margin-top: 100px;
     color: white;
 }
+
+.titulo2{
+    text-align: center;
+    color: #3d6da8;
+}
+
+.texto2 {
+    position: absolute;
+    font-family: Arial;
+    font-size: 25px;
+    text-align:right;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 100px;
+    color: #3d6da8;
+    width: 600px;
+}
+.igin {
+    width: 360px;
+    
+    margin-top: 20px;
+    margin-left: 10px;
+    position: relative; 
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    left: 750px;
+}
+.lais {
+    position: relative;
+    left: -40px;
+}
+
+.texto3 {
+    position: absolute;
+    font-family: Arial;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 100px;
+    color: #3d6da8;
+    width: 600px;
+    left: 450px;
+}
+.laizin {
+    width: 400px;
+    height: 90%;
+    margin-top: 20px;
+    margin-left: 50px;
+    position: relative; 
+    border-radius: 10px 10px 10px 10px;
+}
+
 h1 {
     position: absolute;
+    font-family: Arial;
+    font-size: 50px;
+    margin-left: 36px;
+    margin-top: 40px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+h2 {
+    
+    font-family: Arial;
+    font-size: 50px;
+    margin-left: 36px;
+    margin-top: 40px;
+    font-weight: bolder;
+    color: #3d6da8;
+}
+h3 {
+    
     font-family: Arial;
     font-size: 40px;
     margin-left: 36px;
     margin-top: 40px;
     font-weight: bolder;
-    color: white;
-}
-.divisa {
-    position: relative;
-    bottom: -50%;
-    height: 150px;
-    left: 20%;
-}
-.linha {
-    position: relative;
-    bottom: -66.4%;
-    left: -18%;
-    height: 90px;
-}
-.linha2 {
-    position: relative;
-    bottom: -66.6219%;
-    left: -46.8%;
-    height: 90px;
+    color: #3d6da8;
 }
 
-.centraliza{
-    background-color: #3d6da8;
-    color:white;
-    font-size: 50px;
-    font-weight: 200px;
-    text-align: center;
-}
-
-.quadro_paciente{
-    background-color: rgb(239, 239, 239);
-    margin-left: 440px;
-    width: 400px;
-    height: 260px;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: #cac4a7 3px 3px 3px;
+.medica {
     display: flex;
-}
-
-.nome{
-    font-weight: 800;
-}
-
-.contato{
-    margin-left: 40px;
-}
-
-.contato p{
-    color:#3d6da8
-}
-
-.preto{
-    color: black
-}
-.botoes {
-    display: flex;
-}
-.botao {
-    margin-left: -225px;
-}
-div button{
-    margin: 0 15px;
-    color: white;
-    border-color: #518DD6;
-    width: 110px;
-    height: 30px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #518DD6;
-    border:  solid white 3px;
-    margin: 0px;
-    margin-top:10px;
-    margin-left: 280px;
-}
-
-.butaozin{
-    margin: 0 15px;
-    color: white;
-    border-color: #518DD6;
-    width: 160px;
-    height: 30px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #518DD6;
-    border:  solid white 3px;
-    margin: 0px;
-    margin-left: 1000px;
 }
     
 /*rodapé começa aqui*/
