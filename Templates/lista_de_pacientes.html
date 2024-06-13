@@ -57,22 +57,38 @@
             <!-- Botão de editar aqui-->
         </section>
 
-        <section>
-        <p>Lista de Consultas</p>
-        <div>
-            <ul>
-                {% for consulta in consultas %}
-                    <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
-                    <ul>
-                        <li><a href="/cancelar_consulta/{{ loop.index0 }}" >Cancelar Consulta</a></li> <!-- Correção aqui -->
-                    </ul>
-                {% endfor %}
-            </ul>
-        </div>
+        <br><br>
 
-            <a href="/agendar_consulta">Agendar consulta</a>
+        <section>
+        <p class="centraliza">Lista de Consultas</p>
+        <br><br>
+        {% for consulta in consultas %}
+        <div class="quadro_paciente20">
+            <div>
+                <br>
+                <div class="contato">
+
+                    <p class="nome">{{ consulta[0] }} </p>
+                    <br>
+                    <p>Nome do pet: <span class="preto">{{ consulta[1] }}</span></p> 
+                    <p>Horario: <span class="preto">{{ consulta[2] }}</span></p>
+                    <p>Data: <span class="preto">Data: {{ consulta[3] }}</span></p>
+                    <p>Nome do Tutor: <span class="preto">{{ consulta[4] }}</span></p>
+                    <p>Sintomas: <span class="preto">{{ consulta[5] }}</span></p>
+                    
+                    
+                    <a href="/cancelar_consulta/{{ loop.index0 }}" ><button class="botao20">Excluir Consulta</button></a> 
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+            <a href="/agendar_consulta"><button class="butaozin"> Marcar consulta</button></a>
 
         </section>
+
+        <br><br>
 
     </main>
     <footer>
