@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial e a largura da visualização para dispositivos móveis -->
-    <title>Calculadora Idade</title> <!-- Define o título da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Idade</title>
     <link rel="stylesheet" href="../static/css/calculadora.css">
     <link rel="shortcut icon" href="../static/img/logo2.png" type="image/x-icon">
+
 </head>
 <body>
     <header class="cabecao">
@@ -20,21 +21,17 @@
     <main>
         <div class="titulo">
             <h1 class="titulo">DOG DODÓI</h1>
-            <p class="slogan">A GARANTIA DE UM PET SAUDÁVEL!
-            </p>
-            <a href="/adicionar_paciente"><button class="conferir">CONFIRA AQUI</button></a>
-        <img src="../static/img/gato_zaroio.png" alt="" class="imagem">
+            <p class="slogan">A GARANTIA DE UM PET SAUDÁVEL!</p>
+            <button class="conferir" onclick="trocarImagem()">CONVERTER</button>
+            <img src="../static/img/gato_zaroio.png" alt="" class="imagem" id="imagem">
         </div>
         
-        <h2 class="titulo1">Calculadora de Idade</h2> <!-- Título principal da página -->
+        <h2 class="titulo1">Calculadora de Idade</h2>
         <br><br>
         
         <p class="textin">
-            Se você já se perguntou quantos anos seu cachorro ou gato teria se
-            fosse um ser humano, está no lugar certo. Nossa ferramenta intuitiva
-            transforma a idade dos seus pets em idade humana, ajudando você a
-            compreender melhor suas necessidades e cuidados em cada fase da vida.<BR>
-            Descubra agora mesmo quantos anos humanos tem o seu amigo peludo
+            Se você já se perguntou quantos anos seu cachorro ou gato teria se fosse um ser humano, está no lugar certo. Nossa ferramenta intuitiva transforma a idade dos seus pets em idade humana, ajudando você a compreender melhor suas necessidades e cuidados em cada fase da vida.<br>
+            Descubra agora mesmo quantos anos humanos tem o seu amigo peludo.
         </p>
         
         <br><br>
@@ -54,46 +51,48 @@
                     <input type="number" id="idade" name="idade" required>
                     <br><br>
                     <button type="submit">Calcular idade</button>
-                    <br></br>
+                    <br><br>
                     {% if mensagem %}
                     {{mensagem}}
                     {% endif %}
+                </form>
             </div>
-                
-            </form>
-
             <img src="../static/img/tagos_e_tagos.png" class="tago">
         </div>
         <br><br>
-        
     </main>
     <footer>
         <div class="cor_azul">
             <br>
-        <div class="rodape">
-            <br><br><br>
-            <img src="../static/img/contatos_verdadeiro.png" alt="" class="redes">
-
+            <div class="rodape">
+                <br><br><br>
+                <img src="../static/img/contatos_verdadeiro.png" alt="" class="redes">
+            </div>
+            <br>
+            <div class="rodape2">
+                <p>Info • Support • Marketing</p>
+            </div>
+            <br>
+            <div class="rodape2">
+                <p>Termos de Uso • Política de Privacidade</p>
+            </div>
+            <br>
+            <div class="rodape2">
+                <p>©2024 Dog Dodói</p>
+            </div>
+            <div class="divdiv"><img src="../static/img/logo2.png" alt="" class="logo2"></div>
+            <br>
         </div>
-        <br>
-        <div class="rodape2">
-            <p>Info • Support • Marketing</p>
-        </div>
-        <br>
-        <div class="rodape2">
-            <p>Termos de Uso • Política de Privacidade</p>
-        </div>
-        <br>
-        <div class="rodape2">
-            <p>©2024 Dog Dodói</p>
-        </div>
-        <div class="divdiv"><img src="../static/img/logo2.png" alt="" class="logo2"></div>
-        <br>
-    </div>
     </footer>
-
-
-
-
 </body>
+<script>
+    function trocarImagem() {
+        var imagem = document.getElementById('imagem');
+        if (imagem.src.endsWith('gato_zaroio.png')) {
+            imagem.src = '../static/img/homem.png';
+        } else {
+            imagem.src = '../static/img/gato_zaroio.png';
+        }
+    }
+</script>
 </html>

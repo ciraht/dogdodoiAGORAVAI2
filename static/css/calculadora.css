@@ -36,7 +36,11 @@ h1 {
     background-color: white;
     font-weight: bolder;
 }
-
+.imagem {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out; /* Transição de opacidade com duração de 0.5 segundos */
+}
 .slogan {
     position: absolute;
     font-family: Arial;
