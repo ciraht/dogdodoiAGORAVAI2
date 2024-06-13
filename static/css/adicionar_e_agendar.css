@@ -5,6 +5,9 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #ffff;
 }
+h1 {
+    color: black;
+}
 main {
     background-color: #f8f1cf;
     display: flex;
