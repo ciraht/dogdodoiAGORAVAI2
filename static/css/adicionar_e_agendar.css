@@ -6,7 +6,7 @@
     color: #ffff;
 }
 main {
-    background-color: #99D6D1;
+    background-color: #f8f1cf;
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -152,4 +152,55 @@ select option {
 }
 .logo2 {
     height: 80px;
+}
+
+/* As próximas linhas são para tornar o site responsivo */
+@media (max-width: 550px) {
+
+    /* Botão "home" */
+    header div a:first-child {
+        position: absolute;
+        top: 24vh;
+        right: 49px;
+    }
+    header div a:first-child .btn {
+        width: 77px;
+        right: 21px;
+    }
+
+    /* Botão "lista de pacientes" */
+    .mudar {
+        position: absolute;
+        top: 24vh;
+        left: 49px;
+    }
+
+
+    .cabecao div {
+        justify-content: center;
+        background-color: #3d6da8;
+        height: 80px;
+        padding-bottom: 10px;
+    }
+    .btn {
+        width: 150px;
+        height: 37.5px;
+        font-size: 0.7em;
+        margin: 0;
+        top:7px;
+        position: relative;
+    }
+    .bloco-form {
+        height: 85vh;
+        width: 237px;
+        border-radius: 20px 20px 20px 20px;
+        padding: 10px;
+
+        border: solid 5px #518DD6;
+    }
+}
+@media (min-width: 560px) {
+    header div a:first-child .btn {
+        width: 77px;
+    }
 }
