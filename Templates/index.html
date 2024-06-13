@@ -18,14 +18,20 @@
     </header>
 
     <main class="fundo">
-        <img src="../static/img/equipe.png" alt="" class="imagem">
+        <div class="titulo">
+            <h1 class="titulo">DOG DODÓI</h1>
+            <p class="slogan">A GARANTIA DE UM PET SAUDÁVEL!
+            </p>
+            <a href="/adicionar_paciente"><button class="conferir">CONFIRA AQUI</button></a>
+        <img src="../static/img/cachorro_fofo.png" alt="" class="imagem">
+        </div>
         <section>
             <div class="inicial">
             <img src="../static/img/gato_cachorro.png" alt="" class="gato_cachorro"> 
             <!-- Imagem ilustrativa com texto embaixo -->
              <div>
-             <h1>QUEM SOMOS NÓS?</h1>  
-            <p class="texto1"> Na Clínica Veterinária Dog Dodoi, priorizamos a comunicação transparente,
+             <h2 class="hwa">QUEM SOMOS NÓS?</h2>  
+            <p class="texto1"> Na Clínica Veterinária Dog Dodói, priorizamos a comunicação transparente,
                  cuidados personalizados e, acima de tudo, o carinho pelos animais.
                   Navegue pelo nosso site para conhecer mais sobre nossos serviços,
                    agendar consultas e acessar recursos informativos sobre o bem-estar animal.
@@ -41,6 +47,7 @@
                 <h2 class="titulo2">
                     CONHEÇA NOSSA EQUIPE
                 </h2>
+                <img src="../static/img/patinha.png" alt="" class="patinha">
                 <br>
             <section>
             <div class="medica">
@@ -48,10 +55,10 @@
             <!-- Imagem ilustrativa com texto embaixo -->
              
              <h3 class="lais">LAIS SINATRA</h3>  
-            <p class="texto2"> Meu nome é Laís e sou uma enfermeira dedicada e apaixonada pela 
+            <p class="texto2"> "Meu nome é Laís e sou uma enfermeira dedicada e apaixonada pela 
                 saúde e bem-estar dos meus pacientes. Com uma sólida formação em enfermagem e uma 
                 vocação para cuidar dos outros, estou comprometida em proporcionar o mais alto nível 
-                de cuidado e conforto a todos que buscam os meus serviços.</p>
+                de cuidado e conforto a todos que buscam os meus serviços."</p>
             </div>
 <br>
             <div class="medica">
@@ -59,67 +66,15 @@
             <!-- Imagem ilustrativa com texto embaixo -->
              
              <h3>IGOR CERAZ</h3>  
-            <p class="texto3"> Meu nome é Igor e sou apaixonado por cuidar dos nossos amigos 
+            <p class="texto3"> "Meu nome é Igor e sou apaixonado por cuidar dos nossos amigos 
                 peludos! Com uma formação sólida em medicina veterinária e anos de experiência 
                 prática, estou aqui para oferecer os melhores cuidados possíveis aos seus animais 
-                de estimação.</p>
+                de estimação."</p>
             </div>
+            <img src="../static/img/osso.png" alt="" class="osso">
         </section>
 
-        <section>
-            <p class="centraliza">Lista de Pacientes</p>
-            
-            <br><br>
-            <div>
-                {% for paciente in pacientes %}
-                <div class="quadro_paciente">
-                    
-                    <div>
-                        <br>
-                        <div class="contato">
-                            <p class="nome">{{ paciente[1] }}</p>
-                            <br>
-                            <p>Nome do pet: <span class="preto">{{ paciente[1] }}</span> </p>
-                            <p>Animal: <span class="preto">{{ paciente[2] }}</span></p>
-                            <p>Raça: <span class="preto">{{ paciente[3] }}</span> </p>
-                            <p>Peso: <span class="preto">{{ paciente[4] }}</span> </p>
-                            <p>Nome do tutor: <span class="preto">{{ paciente[5] }}</span> </p>
-                            <p>E-mail: <span class="preto">{{ paciente[6] }}</span> </p> 
-                            <p>Telefone de contato: <span class="preto">{{ paciente[7]}}</span></p>
-                            <br>
-                        </div>
-                        <div class="botoes">
-                            <a href="/editar_paciente/{{ loop.index0 }}"><button>Editar</button></a>
-                      
-                        <a href="/cancelar_paciente/{{ loop.index0 }}"><button class="botao">Excluir Paciente</button></a> <!-- Correção aqui -->
-                    </div>
-                    </div>
-                </div>
-                <br><br>
-                {% endfor %}
-                
-            </div>
-            
-            <a href="/adicionar_paciente"><button class="butaozin">Adicionar Paciente</button></a>
-            <!-- Botão de editar aqui-->
-        </section>
-
-        <section>
-        <p>Lista de Consultas</p>
-        <div>
-            <ul>
-                {% for consulta in consultas %}
-                    <li>Código: {{ consulta[0] }} | Nome do animal: {{ consulta[1] }} | Horário: {{ consulta[2] }} | Data: {{ consulta[3] }} | Nome do tutor: {{ consulta[4] }} | Sintomas: {{ consulta[5] }} | {{ consulta[6] }}</li>
-                    <ul>
-                        <li><a href="/cancelar_consulta/{{ loop.index0 }}" >Cancelar Consulta</a></li> <!-- Correção aqui -->
-                    </ul>
-                {% endfor %}
-            </ul>
-        </div>
-
-            <a href="/agendar_consulta">Agendar consulta</a>
-
-        </section>
+        <br><br>
 
     </main>
     <footer>
