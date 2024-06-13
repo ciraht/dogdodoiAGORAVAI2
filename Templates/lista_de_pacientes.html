@@ -11,44 +11,27 @@
         <img src="../static/img/logo.png" alt="" class="logo">
         <div>
             <a href="/"><button class="btn">HOME</button></a>
-            <a href="lista_de_pacientes.html"><button class="btn">LISTA DE PACIENTES</button></a>
+            <a href="lista_de_pacientes"><button class="btn">LISTA DE PACIENTES</button></a>
             <a href="calculadora_idade"><button class="btn">CALCULADORE DE IDADE</button></a>
             <a href="medicamento"><button class="btn">CALCULADORA DE MEDICAMENTOS</button></a>
         </div>
     </header>
 
     <main class="fundo">
-        <img src="../static/img/equipe.png" alt="" class="imagem">
-        <section>
-            <div class="inicial">
-            <img src="../static/img/gato_cachorro.png" alt="" class="gato_cachorro"> 
-            <!-- Imagem ilustrativa com texto embaixo -->
-             <div class="ota_div">
-             <h1>QUEM SOMOS NÓS</h1>
-             <br><br><br><br><br><br><br>   
-            <p class="texto1"> Na Clínica Veterinária Dog Dodoi, priorizamos a comunicação transparente,
-                 cuidados personalizados e, acima de tudo, o carinho pelos animais.
-                  Navegue pelo nosso site para conhecer mais sobre nossos serviços,
-                   agendar consultas e acessar recursos informativos sobre o bem-estar animal.
-                Estamos aqui para sermos a extensão do seu cuidado e amor pelos seus animais de estimação.
-                 Sinta-se à vontade para explorar nosso site e descobrir como podemos cuidar
-                  da saúde e felicidade dos seus amigos peludos.
-            </p>
-            
-            </div>
-        </section>
 
         <section>
-            <p class="centraliza">Lista de Pacientes</p>
             
-            <br><br>
+            <p class="centraliza">Lista de  Pacientes</p>
+            
             <div>
+                
                 {% for paciente in pacientes %}
                 <div class="quadro_paciente">
-                    
+                      
                     <div>
                         <br>
                         <div class="contato">
+                            
                             <p class="nome">{{ paciente[1] }}</p>
                             <br>
                             <p>Nome do pet: <span class="preto">{{ paciente[1] }}</span> </p>
