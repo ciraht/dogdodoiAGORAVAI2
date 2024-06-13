@@ -182,6 +182,7 @@ section:first-child p {
     border-radius: 10px 10px 10px 10px;
     position: relative;
     left: 750px;
+    border: 10px inset #3d6da8;
 }
 .lais {
     position: relative;
@@ -207,6 +208,7 @@ section:first-child p {
     margin-left: 50px;
     position: relative; 
     border-radius: 10px 10px 10px 10px;
+    border: 10px inset #3d6da8;
 }
 
 h1 {
