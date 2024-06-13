@@ -14,6 +14,37 @@
 
 }
 
+.titulo {
+    left: 34%;
+    font-weight: bolder;
+    font-size: 70px;
+}
+.conferir {
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-top: 300px;
+    font-weight: bold;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    height: 70px;
+    border-color: #3d6da8;
+    border-width: 5px;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.slogan {
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 225px;
+    font-weight: bold;
+    color: black;
+}
+
 .cabecao div{
     background-color: #3d6da8;
     height: 80px;
@@ -21,7 +52,11 @@
     justify-content: flex-end;
     gap: 15px;
 }
-
+.imagem{
+    width: 100%;
+    height: 400px;
+    
+}
 .textin{
     color: white;
     position: absolute;
@@ -30,7 +65,15 @@
     top:3px;
     
 }
-
+h1 {
+    position: absolute;
+    font-family: Arial;
+    font-size: 50px;
+    margin-left: -400px;
+    margin-top: 140px;
+    font-weight: bolder;
+    color: black;
+}
 .btn{
     margin: 0 15px;
     color: white;
@@ -72,10 +115,6 @@ section:first-child {
     
 }
 
-.imagem{
-    width: 100%;
-    height: 280px;
-}
 
 .centraliza{
     background-color: #3d6da8;
