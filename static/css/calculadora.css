@@ -86,7 +86,7 @@ main{
 .idade{
     text-align: center;
     background-color: rgb(239, 239, 239);
-    margin-left: 340px;
+    margin-left: 40px;
     width: 600px;
     height: 200px;
     border-radius: 10px 10px 10px 10px;
@@ -107,6 +107,18 @@ div button{
     letter-spacing: 0.1px;
     margin-top:10px;
     font-weight: 800;
+}
+
+.diladin{
+    display: flex;
+}
+
+.chacorro{
+    height: 300px;
+}
+
+.tago{
+    height: 300px;
 }
 
 .rodape {

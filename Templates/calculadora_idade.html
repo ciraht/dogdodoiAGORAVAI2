@@ -22,6 +22,7 @@
         
         <h1 class="titulo">Calculadora de Idade</h1> <!-- Título principal da página -->
         <br><br>
+        
         <p class="textin">
             Se você já se perguntou quantos anos seu cachorro ou gato teria se
             fosse um ser humano, está no lugar certo. Nossa ferramenta intuitiva
@@ -29,30 +30,35 @@
             compreender melhor suas necessidades e cuidados em cada fase da vida.<BR>
             Descubra agora mesmo quantos anos humanos tem o seu amigo peludo
         </p>
+        
         <br><br>
-        <img src="../static/img/duas_pata.png" alt="" class="patas">
-        <div class="idade">
-            <form action="/calculadora_idade" method="post">
-                <br><br>
-                <label for='ser'>Você quer converter a idade de um cachorro ou de um gato?</label>
-                <select id="ser" name="ser">
-                    <option value="Cachorro">Cachorro</option>
-                    <option value="Gato">Gato</option>
-                </select>
-                <br>
-                <label for="idade">Quntos anos seu animal tem?</label>
-                <input type="number" id="idade" name="idade" required>
-                <br><br>
-                <button type="submit">Calcular idade</button>
-                <br></br>
-                {% if mensagem %}
-                {{mensagem}}
-                {% endif %}
+
+        <div class="diladin">
+            <img src="../static/img/chacorros_e_chagorros.png" class="chacorro">
+            <div class="idade">
+                <form action="/calculadora_idade" method="post">
+                    <br><br>
+                    <label for='ser'>Você quer converter a idade de um cachorro ou de um gato?</label>
+                    <select id="ser" name="ser">
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                    </select>
+                    <br>
+                    <label for="idade">Quntos anos seu animal tem?</label>
+                    <input type="number" id="idade" name="idade" required>
+                    <br><br>
+                    <button type="submit">Calcular idade</button>
+                    <br></br>
+                    {% if mensagem %}
+                    {{mensagem}}
+                    {% endif %}
+            </div>
+                
+            </form>
+
+            <img src="../static/img/tagos_e_tagos.png" class="tago">
         </div>
-            
-        </form>
         <br><br>
-        <img src="../static/img/patas.png" alt="" class="patas">
         
     </main>
     <footer>
