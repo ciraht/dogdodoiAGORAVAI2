@@ -78,9 +78,15 @@ section:first-child p {
 
 .imagem{
     width: 100%;
-    height: 280px;
+    height: 400px;
+    
 }
 
+.titulo {
+    left: 34%;
+    font-weight: bolder;
+    font-size: 70px;
+}
 .gato_cachorro {
     width: 500px;
     height: 90%;
@@ -94,7 +100,9 @@ section:first-child p {
     height: 350px;
     width: 100%;
     background-color: #3d6da8;
-    margin-top: -4px;
+
+    margin-top: -16px;
+
 }
 
 .texto1 {
@@ -104,13 +112,54 @@ section:first-child p {
     text-align: left;
     margin-left: 40px;
     margin-right: 80px;
-    margin-top: 100px;
+    margin-top: 20px;
     color: white;
 }
 
+.conferir {
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-top: 300px;
+    font-weight: bold;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    height: 70px;
+    width: 280px;
+    border-color: #3d6da8;
+    border-width: 5px;
+    background-color: white;
+    font-weight: bolder;
+}
+.hwa {
+    color: #ffffff;
+}
+.slogan {
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 225px;
+    font-weight: bold;
+    color: black;
+}
 .titulo2{
     text-align: center;
     color: #3d6da8;
+    font-weight: bolder;
+}
+.patinha {
+    position: absolute;
+    height: 130px;
+    left: 100px;
+    bottom: -500px;
+}
+.osso {
+    position: absolute;
+    height: 130px;
+    left: 90%;
+    bottom: -1250px;
 }
 
 .texto2 {
@@ -164,10 +213,10 @@ h1 {
     position: absolute;
     font-family: Arial;
     font-size: 50px;
-    margin-left: 36px;
-    margin-top: 40px;
+    margin-left: -400px;
+    margin-top: 140px;
     font-weight: bolder;
-    color: #ffffff;
+    color: black;
 }
 
 h2 {
